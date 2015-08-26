@@ -1,0 +1,19 @@
+
+
+
+<div ng-controller="TasksCtrl">
+
+    <h1 class="tasks-title">todos</h1>
+
+    <div class="new-task">
+        <input placeholder="Enter new task..." type="text" ng-model="newTask.title">
+        <div class="confirm-button" ng-click="addTask()">
+            <ng-md-icon icon="done"></ng-md-icon>
+        </div>
+    </div>
+
+    <div class="task-container">
+        <task ng-repeat="task in taskList" on-remove="removeTask(task)" on-toggle="toggleTask(task)" task-model="task"></task>
+    </div>
+
+</div>

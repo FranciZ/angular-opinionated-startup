@@ -1,0 +1,16 @@
+<div class="task-card">
+
+    <div class="task-toggle-button" ng-click="toggleTask()" ng-class="{'task-done':taskModel.done}">
+        <ng-md-icon icon="done"></ng-md-icon>
+    </div>
+
+    <div class="remove-button" ng-click="removeTask()">
+        <ng-md-icon icon="close"></ng-md-icon>
+    </div>
+
+    <div class="task-card-main">
+        <input ng-model="taskModel.title" type="text">
+        <p class="task-date">{{taskModel.date | date:'EEEE, MMMM dd yyyy, hh:mm'}}</p>
+    </div>
+
+</div>
